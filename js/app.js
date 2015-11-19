@@ -9,11 +9,20 @@ $(document).ready(function() {
     });
   });
   });
-  $('.ryu').keydown(function(e){
-    if(e.keyCode==88){
-      alert("hi");
+   $(document).keydown(function(e){
+      if(e.keyCode==88){
+        playHadouken();
+    $('.ryu-still').hide();
+    $('.ryu-cool').show();
     }
-  });
+    });
+   $(document).keyup(function(e){
+      if(e.keyCode==88){
+
+    $('.ryu-still').show();
+    $('.ryu-cool').hide();
+    }
+    });
     $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
